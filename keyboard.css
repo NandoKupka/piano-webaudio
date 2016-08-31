@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+.note_box {
+  max-width: 90%;
+  margin: 0 auto;
+  border: 2px solid black;
+  display: inline-block;
+  padding: 0;
+}
+.note_box__btn {
+  display: inline-block;
+  background-color: white;
+  width: 50px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border: 1px solid black;
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.note_box__btn__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: inherit;
+  right: 0;
+  margin: 0 auto;
+}
+.sharp {
+  background-color: black;
+  color: white;
+  width: 25px;
+  margin-left: -25px;
+  height: 100px;
+  transform: translateX(50%);
+  z-index: 5;
+}

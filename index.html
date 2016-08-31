@@ -1,0 +1,81 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>WEB API</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="keyboard.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+      <ul class="note_box">
+
+        <li class="note_box__btn basic" value="261.63" id="cNote"><span class="note_box__btn__text">C</span></li>
+        <li class="note_box__btn sharp" value="277.18" id="csNote"><span class="note_box__btn__text">C#</span></li>
+        <li class="note_box__btn basic" value="293.66" id="dNote"><span class="note_box__btn__text">D</span></li>
+        <li class="note_box__btn sharp" value="311.13" id="dsNote"><span class="note_box__btn__text">D#</span></li>
+        <li class="note_box__btn basic" value="329.63" id="eNote"><span class="note_box__btn__text">E</span></li>
+        <li class="note_box__btn basic" value="349.23" id="fNote"><span class="note_box__btn__text">F</span></li>
+        <li class="note_box__btn sharp" value="369.99" id="fsNote"><span class="note_box__btn__text">F#</span></li>
+        <li class="note_box__btn basic" value="392.00" id="gNote"><span class="note_box__btn__text">G</span></li>
+        <li class="note_box__btn sharp" value="415.30" id="gsNote"><span class="note_box__btn__text">G#</span></li>
+        <li class="note_box__btn basic" value="440.00" id="aNote"><span class="note_box__btn__text">A</span></li>
+        <li class="note_box__btn sharp" value="466.160" id="asNote"><span class="note_box__btn__text">A#</span></li>
+        <li class="note_box__btn basic" value="493.88" id="bNote"><span class="note_box__btn__text">B</span></li>
+        <li class="note_box__btn basic" value="523.25" id="c2Note"><span class="note_box__btn__text">C</span></li>
+      </div>
+    </body>
+    <script type="text/javascript">
+      $(window).keypress(function (e) {
+        if (e.keyCode === 39) {
+          $( "#cNote" ).click();
+        }
+        if (e.keyCode === 49) {
+          $( "#csNote" ).click();
+        }
+        if (e.keyCode === 50) {
+          $( "#dNote" ).click();
+        }
+        if (e.keyCode === 51) {
+          $( "#dsNote" ).click();
+        }
+        if (e.keyCode === 52) {
+          $( "#eNote" ).click();
+        }
+        if (e.keyCode === 53) {
+          $( "#fNote" ).click();
+        }
+        if (e.keyCode === 54) {
+          $( "#fsNote" ).click();
+        }
+        if (e.keyCode === 55) {
+          $( "#gNote" ).click();
+        }
+        if (e.keyCode === 56) {
+          $( "#gsNote" ).click();
+        }
+        if (e.keyCode === 57) {
+          $( "#aNote" ).click();
+        }
+        if (e.keyCode === 48) {
+          $( "#asNote" ).click();
+        }
+        if (e.keyCode === 45) {
+          $( "#bNote" ).click();
+        }
+        if (e.keyCode === 61) {
+          $( "#c2Note" ).click();
+        }
+        if (e.keyCode === 113) {
+          osc.frequency.value = 0;
+        }
+      });
+      baseAudio = new AudioContext();
+      osc = baseAudio.createOscillator();
+      osc.connect(baseAudio.destination)
+      osc.frequency.value = 0;
+      osc.start(0);
+      $('.note_box__btn').click(function() {
+        osc.frequency.value = $(this).attr('value');
+      });
+    </script>
+  </html>
