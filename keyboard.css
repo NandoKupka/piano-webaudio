@@ -21,6 +21,7 @@
   float: left;
   text-align: center;
   position: relative;
+  transition: 0.2s;
 }
 .note_box__btn__text {
   position: absolute;
@@ -30,6 +31,12 @@
   right: 0;
   margin: 0 auto;
 }
+.pressed {
+  background-color: gray;
+}
+.sharp.pressed {
+  background-color: gray;
+}
 .sharp {
   background-color: black;
   color: white;
@@ -38,4 +45,7 @@
   height: 100px;
   transform: translateX(50%);
   z-index: 5;
+}
+.stop_btn {
+  margin: 0 24px;
 }
