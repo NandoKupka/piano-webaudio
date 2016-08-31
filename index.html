@@ -28,49 +28,53 @@
         if (e.keyCode === 39) {
           $( "#cNote" ).click();
         }
-        if (e.keyCode === 49) {
+        else if (e.keyCode === 49) {
           $( "#csNote" ).click();
         }
-        if (e.keyCode === 50) {
+        else if (e.keyCode === 50) {
           $( "#dNote" ).click();
         }
-        if (e.keyCode === 51) {
+        else if (e.keyCode === 51) {
           $( "#dsNote" ).click();
         }
-        if (e.keyCode === 52) {
+        else if (e.keyCode === 52) {
           $( "#eNote" ).click();
         }
-        if (e.keyCode === 53) {
+        else if (e.keyCode === 53) {
           $( "#fNote" ).click();
         }
-        if (e.keyCode === 54) {
+        else if (e.keyCode === 54) {
           $( "#fsNote" ).click();
         }
-        if (e.keyCode === 55) {
+        else if (e.keyCode === 55) {
           $( "#gNote" ).click();
         }
-        if (e.keyCode === 56) {
+        else if (e.keyCode === 56) {
           $( "#gsNote" ).click();
         }
-        if (e.keyCode === 57) {
+        else if (e.keyCode === 57) {
           $( "#aNote" ).click();
         }
-        if (e.keyCode === 48) {
+        else if (e.keyCode === 48) {
           $( "#asNote" ).click();
         }
-        if (e.keyCode === 45) {
+        else if (e.keyCode === 45) {
           $( "#bNote" ).click();
         }
-        if (e.keyCode === 61) {
+        else if (e.keyCode === 61) {
           $( "#c2Note" ).click();
         }
-        if (e.keyCode === 113) {
+        else if (e.keyCode === 113) {
           osc.frequency.value = 0;
         }
       });
-      baseAudio = new AudioContext();
-      osc = baseAudio.createOscillator();
+      var baseAudio = new AudioContext();
+      var osc = baseAudio.createOscillator();
+      var gainNode = baseAudio.createGain();
       osc.connect(baseAudio.destination)
+      gainNode.connect(baseAudio.destination);
+      osc.connect(gainNode)
+      gainNode.gain.value = 0.2;
       osc.frequency.value = 0;
       osc.start(0);
       $('.note_box__btn').click(function() {
