@@ -1,62 +1,50 @@
-
+$(function() {
+  octaves.forEach(callNotes);
+});
+function callNotes(octave, index, array) {
+  if (octave.active) {
+    octave.notes.forEach(printKeys);
+  }
+};
+function printKeys(note, index, array) {
+  var isSharp = ((note.sharp) ? " sharp" : "");
+  document.getElementById('board').innerHTML += "<li onClick='keyClick(this)' class='note_box__btn basic"+ isSharp+
+                                                "' value='"+note.frequency+
+                                                "' id='"+note.key+
+                                                "'><span class='note_box__btn__text'>"+note.label+"<br>("+note.key+
+                                                ")</span></li>";
+};
 $(window).keypress(function (e) {
-  if (e.keyCode === 39) {
-    $( "#cNote" ).click();
-  }
-  else if (e.keyCode === 49) {
-    $( "#csNote" ).click();
-  }
-  else if (e.keyCode === 50) {
-    $( "#dNote" ).click();
-  }
-  else if (e.keyCode === 51) {
-    $( "#dsNote" ).click();
-  }
-  else if (e.keyCode === 52) {
-    $( "#eNote" ).click();
-  }
-  else if (e.keyCode === 53) {
-    $( "#fNote" ).click();
-  }
-  else if (e.keyCode === 54) {
-    $( "#fsNote" ).click();
-  }
-  else if (e.keyCode === 55) {
-    $( "#gNote" ).click();
-  }
-  else if (e.keyCode === 56) {
-    $( "#gsNote" ).click();
-  }
-  else if (e.keyCode === 57) {
-    $( "#aNote" ).click();
-  }
-  else if (e.keyCode === 48) {
-    $( "#asNote" ).click();
-  }
-  else if (e.keyCode === 45) {
-    $( "#bNote" ).click();
-  }
-  else if (e.keyCode === 61) {
-    $( "#c2Note" ).click();
-  }
-  else if (e.keyCode === 113) {
-    $( "#stop" ).click();
-  }
+  function simulateClick(element, index, array) {
+    if (String.fromCharCode(e.keyCode) === element.getAttribute('id')) {
+      $(element).click();
+    }
+  };
+  btnCollection = document.getElementsByClassName('note_box__btn');
+  var btns = Array.from(btnCollection);
+  btns.forEach(simulateClick);
+
 });
 var baseAudio = new AudioContext();
 var osc = baseAudio.createOscillator();
 var gainNode = baseAudio.createGain();
 osc.connect(baseAudio.destination)
 gainNode.connect(baseAudio.destination);
-osc.connect(gainNode)
+osc.connect(gainNode);
 gainNode.gain.value = 0.2;
 osc.frequency.value = 0;
 
 osc.start(0);
-$('.note_box__btn').click(function() {
+
+function keyClick(element) {
+  debugger;
+  //press animation
   if (document.getElementsByClassName('pressed')) {
     $(document.getElementsByClassName('pressed')).removeClass('pressed');
   }
-  osc.frequency.value = $(this).attr('value');
-  $(this).addClass('pressed');
-});
+
+  $(element).addClass('pressed');
+
+  //set frequency
+  osc.frequency.value = parseInt(element.getAttribute('value'));
+};

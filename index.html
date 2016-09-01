@@ -7,22 +7,14 @@
       <link rel="stylesheet" href="keyboard.css" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
-      <ul class="note_box">
-        <li class="note_box__btn basic" value="261.63" id="cNote"><span class="note_box__btn__text">C (')</span></li>
-        <li class="note_box__btn sharp" value="277.18" id="csNote"><span class="note_box__btn__text">C# (1)</span></li>
-        <li class="note_box__btn basic" value="293.66" id="dNote"><span class="note_box__btn__text">D (2)</span></li>
-        <li class="note_box__btn sharp" value="311.13" id="dsNote"><span class="note_box__btn__text">D# (3)</span></li>
-        <li class="note_box__btn basic" value="329.63" id="eNote"><span class="note_box__btn__text">E (4)</span></li>
-        <li class="note_box__btn basic" value="349.23" id="fNote"><span class="note_box__btn__text">F (5)</span></li>
-        <li class="note_box__btn sharp" value="369.99" id="fsNote"><span class="note_box__btn__text">F# (6)</span></li>
-        <li class="note_box__btn basic" value="392.00" id="gNote"><span class="note_box__btn__text">G (7)</span></li>
-        <li class="note_box__btn sharp" value="415.30" id="gsNote"><span class="note_box__btn__text">G# (8)</span></li>
-        <li class="note_box__btn basic" value="440.00" id="aNote"><span class="note_box__btn__text">A (9)</span></li>
-        <li class="note_box__btn sharp" value="466.160" id="asNote"><span class="note_box__btn__text">A# (0)</span></li>
-        <li class="note_box__btn basic" value="493.88" id="bNote"><span class="note_box__btn__text">B (-)</span></li>
-        <li class="note_box__btn basic" value="523.25" id="c2Note"><span class="note_box__btn__text">C (+)</span></li>
+      <ul id="board" class="note_box">
       </ul>
-      <button class="stop_btn note_box__btn" value="0" id="stopN"><span class="">STOP</span></button>
+      <div class="tips_song">
+        b b c v b n b v c x c c z x c v c x z u y y z n b z z x c v c x z c v x <br>
+        b b c v b n b v c x c c z x c v c x z u y y z n b z z x c v c x z x x z z u z
+      </div>
+      <button class="stop_btn note_box__btn" onClick="keyClick(this)"" value="0" id="]"><span class="">STOP</span></button>
+      <script type="text/javascript" src="freq.json"></script>
       <script type="text/javascript" src="main.js"></script>
     </body>
   </html>

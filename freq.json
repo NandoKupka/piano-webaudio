@@ -1,0 +1,80 @@
+octaves =
+[
+  {
+    "name": "first_octave",
+    "notes":
+    [
+      {"label":"C1", "frequency":"32.70", "sharp":false, "key": "q"}, 
+      {"label":"C#1", "frequency":"34.65", "sharp":true, "key": "2"}, 
+      {"label":"D1","frequency":"36.71", "sharp":false, "key": "w"},
+      {"label":"D#1","frequency":"38.89", "sharp":true, "key": "3"},
+      {"label":"E1","frequency":"41.20", "sharp":false, "key": "e"},
+      {"label":"F1","frequency":"43.65", "sharp":false, "key": "r"},
+      {"label":"F#1","frequency":"46.25", "sharp":true, "key": "5"},  
+      {"label":"G1","frequency":"49.00", "sharp":false, "key": "t"},
+      {"label":"G#1","frequency":"51.91", "sharp":true, "key": "6"},
+      {"label":"A1","frequency":"55.00", "sharp":false, "key": "y"},
+      {"label":"A#1","frequency":"58.27", "sharp":true, "key": "7"},
+      {"label":"B1","frequency":"61.74", "sharp":false, "key": "u"}
+    ],
+    "active": false
+  },
+  {
+    "name": "second_octave",
+    "notes":
+    [
+      {"label":"C2", "frequency":"65.41", "sharp":false, "key": "z"}, 
+      {"label":"C#2", "frequency":"69.30", "sharp":true, "key": "s"}, 
+      {"label":"D2","frequency":"73.42", "sharp":false, "key": "x"},
+      {"label":"D#2","frequency":"77.78", "sharp":true, "key": "d"},
+      {"label":"E2","frequency":"82.41", "sharp":false, "key": "c"},
+      {"label":"F2","frequency":"87.31", "sharp":false, "key": "v"},
+      {"label":"F#2","frequency":"92.50", "sharp":true, "key": "g"},  
+      {"label":"G2","frequency":"98.00", "sharp":false, "key": "b"},
+      {"label":"G#2","frequency":"103.83", "sharp":true, "key": "h"},
+      {"label":"A2","frequency":"110.00", "sharp":false, "key": "n"},
+      {"label":"A#2","frequency":"116.54", "sharp":true, "key": "j"},
+      {"label":"B2","frequency":"123.47", "sharp":false, "key": "m"}
+    ],
+    "active": false
+  },
+  {
+    "name": "third_octave",
+    "notes":
+    [
+      {"label":"C3", "frequency":"130.81", "sharp":false, "key": "q"}, 
+      {"label":"C#3", "frequency":"138.59", "sharp":true, "key": "2"}, 
+      {"label":"D3","frequency":"146.83", "sharp":false, "key": "w"},
+      {"label":"D#3","frequency":"155.56", "sharp":true, "key": "3"},
+      {"label":"E3","frequency":"164.81", "sharp":false, "key": "e"},
+      {"label":"F3","frequency":"174.61", "sharp":false, "key": "r"},
+      {"label":"F#3","frequency":"185.00  ", "sharp":true, "key": "5"},  
+      {"label":"G3","frequency":"196.00", "sharp":false, "key": "t"},
+      {"label":"G#3","frequency":"207.65", "sharp":true, "key": "6"},
+      {"label":"A3","frequency":" 220.00", "sharp":false, "key": "y"},
+      {"label":"A#3","frequency":"233.08", "sharp":true, "key": "7"},
+      {"label":"B3","frequency":"246.94", "sharp":false, "key": "u"}
+    ],
+    "active": true
+  },
+  {
+    "name": "fourth_octave",
+    "notes":
+    [
+      {"label":"C4", "frequency":"261.63  ", "sharp":false, "key": "z"}, 
+      {"label":"C#4", "frequency":"277.18 ", "sharp":true, "key": "s"}, 
+      {"label":"D4","frequency":"293.66 ", "sharp":false, "key": "x"},
+      {"label":"D#4","frequency":"311.13  ", "sharp":true, "key": "d"},
+      {"label":"E4","frequency":"329.63 ", "sharp":false, "key": "c"},
+      {"label":"F4","frequency":"349.23", "sharp":false, "key": "v"},
+      {"label":"F#4","frequency":"369.99", "sharp":true, "key": "g"},  
+      {"label":"G4","frequency":"392.00", "sharp":false, "key": "b"},
+      {"label":"G#4","frequency":"415.30", "sharp":true, "key": "h"},
+      {"label":"A4","frequency":"440.00", "sharp":false, "key": "n"},
+      {"label":"A#4","frequency":"466.16", "sharp":true, "key": "j"},
+      {"label":"B4","frequency":"493.88", "sharp":false, "key": "m"}
+    ],
+    "active": true
+  }
+]
+
