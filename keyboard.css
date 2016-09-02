@@ -50,3 +50,11 @@
 .stop_btn {
   margin: 0 24px;
 }
+#select {
+  display: inline-block;
+  top: 9px;
+  position: absolute;
+  width: 100px;
+  font-size: 24px;
+  margin-left: 10px;
+}
