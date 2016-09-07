@@ -1,0 +1,111 @@
+html {
+
+}
+* {
+  box-sizing: border-box;
+}
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+::-webkit-input-placeholder { color:#9c9c9c;font-weight: 300;}
+::-moz-placeholder { color:#9c9c9c;font-weight: 300;} /* firefox 19+ */
+:-ms-input-placeholder { color:#9c9c9c;font-weight: 300;} /* ie */
+input:-moz-placeholder { color:#9c9c9c;font-weight: 300;}
+.preload .transitioned_start {
+  opacity: 0;
+  -webkit-transform: scale(0.5, 1.5);
+  -ms-transform: scale(0.5, 1.5);
+  transform: scale(0.5, 1.5);
+}
+.transitioned_start {
+  opacity: 1;
+  transform: scaleX(1) scaleY(1) scaleZ(1);
+  transition: opacity 1000ms, transform 1000ms;
+}
+*:focus {
+    outline: none;
+}
+body {
+  background-color: #fed876;
+  height: 100vh;
+  font-family: 'Dosis', sans-serif;
+  margin: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+.start_screen {
+  top: 50%;
+  position: relative;
+  transform: translateY(-25%);
+}
+@media (max-width: 768px) {
+  .start_screen {
+    transform: none;
+    top: auto;
+  }
+}
+.container {
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 940px;
+  top: 40%;
+  padding-top: 11px;
+}
+.start_screen__box {
+  max-width: 423px;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .start_screen__box {
+    padding: 20px;
+    transform: none;
+  }
+}
+.start_screen_title-text {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+.logo_text {
+  color: #ff204d;
+}
+.start_screen__form__input {
+  display: block;
+  margin: 15px auto;
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 15px 30px;
+  font-family: Dosis, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  max-width: 100%;
+}
+.start_screen__form__btn {
+  padding: 14px 25px;
+  margin-top: 15px;
+  background-color: #ff204d;
+  border: none;
+  color: #fff;
+  font-family: Dosis, sans-serif;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+	will-change: transform, opacity;
+  transition: all 0.25s ease 0s, opacity 1000ms, transform 500ms, background-color 400ms;
+}
+.start_screen__form__btn:hover {
+  background-color: #3c58c9;
+  transform: scaleX(0.81) scaleY(0.81) scaleZ(1);
+}

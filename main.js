@@ -33,7 +33,7 @@ osc.connect(baseAudio.destination)
 osc2.connect(baseAudio.destination)
 gainNode.connect(baseAudio.destination);
 osc.connect(gainNode);
-gainNode.gain.value = 5;
+gainNode.gain.value = 0.2;
 osc.frequency.value = 0;
 osc.start(0);
 
@@ -48,9 +48,9 @@ function keyClick(element) {
   //set frequency
   if ($('#select option:selected').attr('value') == "jump") {
     gainNode.gain.value = -1;
-    setTimeout(function(){ 
+    setTimeout(function(){
       osc.frequency.value = parseInt(element.getAttribute('value'));
-      gainNode.gain.value = 5;
+      gainNode.gain.value = 0.2;
     }, 30);
   }
   else {

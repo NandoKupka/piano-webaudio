@@ -2,25 +2,37 @@
   <html>
     <head>
       <meta charset="utf-8">
-      <title>WEB API</title>
+      <title>Welcome</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <link rel="stylesheet" href="keyboard.css" media="screen" title="no title" charset="utf-8">
+      <script type="text/javascript">
+      $(window).load(function() {
+        $("body").removeClass("preload");
+      });
+      </script>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
-
+      <link href="http://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800" rel="stylesheet">
     </head>
-    <body>
-      <ul id="board" class="note_box">
-      </ul>
-      <button class="stop_btn note_box__btn" onClick="keyClick(this)"" value="0" id="]"><span class="">STOP<br>( ] )</span></button>
-      <select id="select">
-        <option value="slide">Slide</option> 
-        <option value="jump" selected>Jump</option>
-      </select>
-      <div class="tips_song">
-        b b c v b n b v c x c c z x c v c x z u y y z n b z z x c v c x z c v x <br>
-        b b c v b n b v c x c c z x c v c x z u y y z n b z z x c v c x z x x z z u z
+    <body class="preload">
+      <div class="start_screen">
+        <div class="container">
+          <div class="start_screen__box">
+            <div class="start_screen__title transitioned_start">
+              <h1 class="start_screen_title-text">welcome to <span class="logo_text">syntalks</span></h1>
+            </div>
+            <div>
+              <form class="start_screen__form" action="" method="post">
+                <input placeholder="what's your name?" class="start_screen__form__input transitioned_start" type="text" name="name" value="">
+                <input placeholder="where are you from?" class="start_screen__form__input transitioned_start" type="text" name="name" value="">
+                <div class="transitioned_start">
+                  <a href="./piano.html">
+                    <input type="button" name="name" class="start_screen__form__btn" value="i'm ready">
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <script type="text/javascript" src="freq.json"></script>
-      <script type="text/javascript" src="main.js"></script>
+      <link rel="stylesheet" href="start.css" media="screen" title="no title" charset="utf-8">
     </body>
   </html>
