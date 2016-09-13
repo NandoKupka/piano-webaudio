@@ -16,7 +16,8 @@ function printKeys(note, index, array) {
 };
 $(window).keypress(function (e) {
   function simulateClick(element, index, array) {
-    if (String.fromCharCode(e.keyCode) === element.getAttribute('id')) {
+    debugger;
+    if (String.fromCharCode(e.charCode) === element.getAttribute('id')) {
       $(element).click();
     }
   };
