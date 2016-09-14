@@ -3,6 +3,7 @@ html {
 }
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 .preload * {
   -webkit-transition: none !important;
@@ -108,4 +109,20 @@ body {
 .start_screen__form__btn:hover {
   background-color: #3c58c9;
   transform: scaleX(0.81) scaleY(0.81) scaleZ(1);
+}
+.country_box {
+  position: relative;
+}
+.country_flag {
+  opacity: 0;
+  transition: 0.5s;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 29px;
+  height: 20px;
+  transform: translateY(-50%);
 }

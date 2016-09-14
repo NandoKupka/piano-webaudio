@@ -1,0 +1,16 @@
+countries =
+[
+  {
+    "name": "Brazil",
+    "flag": "http://flagpedia.net/data/flags/mini/br.png"
+  },
+  {
+    "name": "Argentina",
+    "flag": "http://flagpedia.net/data/flags/mini/ar.png"
+  },
+  {
+    "name": "United States",
+    "flag": "http://flagpedia.net/data/flags/mini/us.png"
+  }
+]
+

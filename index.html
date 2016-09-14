@@ -4,11 +4,8 @@
       <meta charset="utf-8">
       <title>Welcome</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script type="text/javascript">
-      $(window).load(function() {
-        $("body").removeClass("preload");
-      });
-      </script>
+      <script type="text/javascript" src="countries.json"></script>
+      <script src="start.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
       <link href="http://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800" rel="stylesheet">
     </head>
@@ -22,7 +19,10 @@
             <div>
               <form class="start_screen__form" action="" method="post">
                 <input placeholder="what's your name?" class="start_screen__form__input transitioned_start" type="text" name="name" value="">
-                <input placeholder="where are you from?" class="start_screen__form__input transitioned_start" type="text" name="name" value="">
+                <div class="country_box">
+                  <input placeholder="where are you from?" class="start_screen__form__input transitioned_start" id="country_input" type="text" name="name" value="">
+                  <span id="flag" class="country_flag"></span>
+                </div>
                 <div class="transitioned_start">
                   <a href="./piano.html">
                     <input type="button" name="name" class="start_screen__form__btn" value="i'm ready">

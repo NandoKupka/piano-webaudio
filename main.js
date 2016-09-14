@@ -1,3 +1,4 @@
+//PIANO
 $(function() {
   octaves.forEach(callNotes);
 });
@@ -23,7 +24,6 @@ $(window).keypress(function (e) {
   btnCollection = document.getElementsByClassName('note_box__btn');
   var btns = Array.from(btnCollection);
   btns.forEach(simulateClick);
-
 });
 var baseAudio = new AudioContext();
 var osc = baseAudio.createOscillator();
